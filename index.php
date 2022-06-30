@@ -16,7 +16,7 @@ $output = curl_exec($curl);
 // (deletes the variable made by curl_init)
 curl_close($curl);
 
-var_dump($output);exit;
+var_dump(json_decode($output, true));exit;
 
 ?>
 
