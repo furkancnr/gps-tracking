@@ -16,7 +16,7 @@ $output = curl_exec($curl);
 // (deletes the variable made by curl_init)
 curl_close($curl);
 
-var_dump(json_decode($output, true));exit;
+$data = json_decode($output, true)
 
 ?>
 
@@ -72,7 +72,7 @@ var_dump(json_decode($output, true));exit;
                 type: 'Feature',
                 geometry: {
                     type: 'Point',
-                    coordinates: [32.523928102718315, 38.016025298272886]
+                    coordinates: [<?= $data[0]["lng"] ?>, <?= $data[0]["lat"] ?>]
                 },
 
                 properties: {
